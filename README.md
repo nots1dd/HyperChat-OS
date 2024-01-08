@@ -3,10 +3,10 @@
 A Global Chatting platform created with React JS and Firebase
 
 ## Stack:
-React JS
-Firebase
-Node JS
-HTML and CSS
+* React JS
+* Firebase
+* Node JS
+* HTML and CSS
 
 # Features:
 1. Google authenticated login
