@@ -4,7 +4,9 @@ import { auth, db } from "../firebase";
 
 const SendMessage = ({ scroll }) => {
   const [msg, setMessage] = useState("");
-  const username = auth.currentUser.displayName;
+  const username = auth.currentUser?.displayName;
+
+  
 
   const sendMessage = async (event) => {
     event.preventDefault();
@@ -12,13 +14,12 @@ const SendMessage = ({ scroll }) => {
       alert("Enter valid message");
       return;
     }
-    const { uid, displayName, photoURL } = auth.currentUser;
+    const { displayName, photoURL } = auth.currentUser;
     await addDoc(collection(db, "messages"), {
       text: msg,
       name: displayName,
       avatar: photoURL,
       createdAt: serverTimestamp(),
-      uid,
     });
     setMessage("");
     scroll.current.scrollIntoView({ behavior: "smooth" });

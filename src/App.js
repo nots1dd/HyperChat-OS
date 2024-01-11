@@ -1,24 +1,38 @@
 import { useAuthState } from "react-firebase-hooks/auth";
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import "./App.css";
-import ChatBox from "./components/ChatBox";
-import NavBar from "./components/NavBar";
-import Welcome from "./components/Welcome";
 import { auth } from "./firebase";
+import Home from "./screens/home";
+import Login from "./screens/login";
+import Register from "./screens/register";
+
 
 function App() {
   const [user] = useAuthState(auth);
+  const ProtectedRoute = ({children}) => {
+    if(user === null){
+      return <Navigate to="login" />;
+    }
+
+    return children
+  };
+
 
   return (
-    <div className="App">
-      <NavBar />
-      {!user ? (
-        <Welcome />
-      ) : (
-        <>
-          <ChatBox />
-        </>
-      )}
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/">
+          <Route index element={
+          <ProtectedRoute>
+            <Login/>
+          </ProtectedRoute>
+        }/>
+          <Route path="login" element={<Login/>}/>
+          <Route path="register" element={<Register/>}/>
+          <Route path="home" element={<Home/>}/>
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 

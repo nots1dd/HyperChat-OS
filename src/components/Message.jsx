@@ -7,8 +7,7 @@ const Message = ({ message }) => {
   const date = new Date();
   const time = date.getHours()+':'+ date.getMinutes();
   return (
-    <div
-      className={`chat-bubble ${message.uid === user.uid ? "right" : ""}`}>
+    <div className= "chat-bubble">
       <img
         className="chat-bubble__left"
         src={message.avatar}

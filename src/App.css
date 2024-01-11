@@ -41,14 +41,6 @@ input {
   width: 100%;
   z-index: 1;
 }
-.sign-in {
-  border: none;
-  background-color: transparent;
-}
-.sign-in > img {
-  height: 30px;
-  width: auto;
-}
 .sign-out {
   padding: 5px 10px;
   border-radius: 5px;
@@ -64,18 +56,13 @@ input {
   background-color: blue;
 }
 
-/* welcome page */
-.welcome {
-  padding: 30px;
-  text-align: center;
-  margin-top: 40px;
-  color: #7cc5d9;
-}
-.welcome :is(h2, p, img) {
-  margin-bottom: 20px;
-}
 
 /* chat component */
+.chat-box {
+  background-color: #7cc5d9;
+}
+
+
 .messages-wrapper {
   padding: 30px;
   margin-bottom: 60px;
@@ -83,7 +70,7 @@ input {
 .chat-bubble {
   border-radius: 20px 20px 20px 0;
   padding: 15px;
-  background-color: white;
+  background-color: lightblue;
   color: #1c2c4c;
   width: max-content;
   max-width: calc(100% - 50px);
@@ -95,14 +82,13 @@ input {
 .chat-bubble.right {
   margin-left: auto;
   border-radius: 20px 20px 0 20px;
-  background-color: lightskyblue;
   box-shadow: -2px 2px 1px 1px lightseagreen;
 }
 .chat-bubble__left {
   width: 35px;
   height: 35px;
   border-radius: 50%;
-  margin-right: 10px;
+  margin-right: 20px;
   background-color: white;
 }
 .user-name {
@@ -173,8 +159,9 @@ input {
 /* user info */
 .user-info {
   position: fixed;
+  display: flex;
   bottom: 3px;
-  right: 200px;
+  right: 100px;
   margin: 20px;
   color: black;
   background-color: lightcyan;
@@ -183,4 +170,5 @@ input {
   cursor: pointer;
 
 }
+
 
