@@ -7,7 +7,7 @@ import "./screens.css";
 const Login = () => {
     const [err, setErr] = useState(false);
     const navigate = useNavigate();
-  
+    
     const handleSubmit = async (e) => {
       e.preventDefault();
       const email = e.target[0].value;

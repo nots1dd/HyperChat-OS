@@ -83,6 +83,7 @@ input {
   margin-left: auto;
   border-radius: 20px 20px 0 20px;
   box-shadow: -2px 2px 1px 1px lightseagreen;
+  background-color: lightskyblue;
 }
 .chat-bubble__left {
   width: 35px;
@@ -135,6 +136,11 @@ input {
 }
 .send-message > input:placeholder {
   color: #ddd;
+}
+.send-message > input:hover {
+  border: #1c2c4c;
+  background-color: lightgreen;
+
 }
 .send-message > :is(input, button):focus {
   outline: none;

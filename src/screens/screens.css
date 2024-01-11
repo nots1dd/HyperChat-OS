@@ -7,11 +7,11 @@
   }
   .formContainer .formWrapper {
     background-color: azure;
-    padding: 20px 60px;
+    padding: 40px 80px;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 17px;
     align-items: center;
   }
   .formContainer .formWrapper .logo {
@@ -38,6 +38,7 @@
   .formContainer .formWrapper form input:hover {
     border: 2px solid lightcyan;
     background-color: #f0f0f0;
+    border-radius: 5px;
   }
 
   .formContainer .formWrapper form button {
