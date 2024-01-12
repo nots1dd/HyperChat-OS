@@ -58,7 +58,7 @@ const Register = () => {
     return(
         <div className="formContainer">
             <div className="formWrapper">
-                <span className="logo">Test Chat</span>
+                <span className="logo">HyperChat</span>
                 <span className="title">Register</span>
                 <form onSubmit={handleSubmit}>
                     <input type="text" placeholder="display name"/>

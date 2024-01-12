@@ -12,7 +12,7 @@ const NavBar = () => {
 
   return (
     <nav className="nav-bar">
-      <h1>Test Chat</h1>
+      <h1>HyperChat by Sid</h1>
         <button onClick={()=>signOut(auth)} className="sign-out" type="button">
           Sign Out
         </button>

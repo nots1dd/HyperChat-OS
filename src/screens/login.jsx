@@ -25,7 +25,7 @@ const Login = () => {
     return(
         <div className="formContainer">
             <div className="formWrapper">
-                <span className="logo">Test Chat</span>
+                <span className="logo">HyperChat</span>
                 <span className="title">Login</span>
                 <form onSubmit={handleSubmit}>
                     <input type="mail id" placeholder="email"/>
