@@ -9,7 +9,7 @@ A Global Chatting platform created with React JS and Firebase
 * HTML and CSS
 
 # Features:
-1. Google authenticated login
+1. Easy login system through Firebase
 2. Firebase as BaaS manages backend with well maintained DB
 3. Real-time response to any changes
 
